@@ -112,17 +112,15 @@ def create_vector_embedding():
 
     st.success("✅ Embeddings created! You can now ask questions.")
 
-# Automatically process uploaded PDFs
 if uploaded_files and st.session_state.vectors is None:
     create_vector_embedding()
 
-# Main Chat UI with ChatGPT-like design
-st.subheader("💬 Chat with the AI")
+st.subheader("💬 Chat with the AI about uploaded PDFs")
 
 # Chat container to display conversation
 chat_container = st.container()
 
-# Display chat history using Streamlit's chat messages
+# Display chat history using streamlit's chat messages
 with chat_container:
     for entry in st.session_state.chat_history:
         with st.chat_message("user"):
@@ -130,7 +128,6 @@ with chat_container:
         with st.chat_message("assistant"):
             st.markdown(f"**🤖 AI:** {entry['bot']}")
 
-# User input at the bottom (fixed position)
 user_prompt = st.chat_input("Type your question here...")
 
 # Ensure embeddings exist before querying
