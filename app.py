@@ -15,6 +15,11 @@ from langchain_community.document_loaders import PyPDFLoader
 # Load environment variables
 load_dotenv()
 
+LANGSMITH_API_KEY = st.secrets["LANGSMITH_API_KEY"]
+LANGSMITH_TRACING = st.secrets["LANGSMITH_TRACING"]
+LANGSMITH_ENDPOINT = st.secrets["LANGSMITH_ENDPOINT"]
+LANGSMITH_PROJECT = st.secrets["LANGSMITH_PROJECT"]
+
 # Streamlit UI Configuration
 st.set_page_config(page_title="PDF Q&A Chatbot", page_icon="📚", layout="wide")
 
