@@ -20,6 +20,7 @@ st.set_page_config(page_title="PDF Q&A Chatbot", page_icon="📚", layout="wide"
 
 # Sidebar for API keys, model selection, and file upload
 with st.sidebar:
+    st.title("🤖 PDF Q&A Chatbot")
     st.title("⚙️ Settings")
 
     # API Key Inputs (No Defaults)
