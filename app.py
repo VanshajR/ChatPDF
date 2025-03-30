@@ -40,7 +40,7 @@ with st.sidebar:
     hf_models = ["all-MiniLM-L6-v2", "sentence-transformers/all-mpnet-base-v2", "BAAI/bge-small-en"]
     selected_hf_model = st.selectbox("🧠 Choose Embeddings Model:", hf_models)
 
-    groq_models = ["Llama3-8b-8192", "Llama3-70b-8192", "mixtral-8x7b-32768"]
+    groq_models = ["Llama3-70b-8192", "Llama3-8b-8192", "mixtral-8x7b-32768"]
     selected_groq_model = st.selectbox("🤖 Choose LLM Model:", groq_models)
 
     # Customizable Chunk Size
